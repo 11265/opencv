@@ -16,6 +16,13 @@ jobs:
     - uses: actions/checkout@v4
       with:
         submodules: true
+        fetch-depth: 0
+        
+    - name: Clone OpenCV
+      run: |
+        if [ ! -d "opencv" ]; then
+          git clone --depth 1 https://github.com/opencv/opencv.git
+        fi
         
     - name: Set up Python
       uses: actions/setup-python@v4
