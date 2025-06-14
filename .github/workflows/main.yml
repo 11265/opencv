@@ -13,7 +13,7 @@ jobs:
     runs-on: macos-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         submodules: true
         
@@ -38,7 +38,7 @@ jobs:
           --build_only_specified_archs
           
     - name: Upload Framework
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: opencv2.framework
-        path: opencv/ios/opencv2.framework/
+        path: opencv/ios/opencv2.framework/ 
